@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">
+       <font color="#4169E1">quiz crafters</font>
+    </string>
+
+
+    <string-array name="genderarray">
+        <item>Male</item>
+        <item>Female</item>
+        <item>unknown</item>
+        <item>other</item>
+    </string-array>
+    
+
+
+
+
+
+
+
+
+
+
+
+</resources>
