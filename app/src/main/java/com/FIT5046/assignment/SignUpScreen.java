@@ -86,6 +86,9 @@ public class SignUpScreen extends AppCompatActivity {
                 {
                     Toast.makeText(SignUpScreen.this, "password and confirm password should be the same", Toast.LENGTH_SHORT).show();
                 }
+                else if(password_input.length()<6){
+                    Toast.makeText(SignUpScreen.this, "Password must have at least 6 characters", Toast.LENGTH_SHORT).show();
+                }
                 else
                 {
 

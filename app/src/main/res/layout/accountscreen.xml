@@ -18,7 +18,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
         android:gravity="center"
-    android:text="Account Profile"/>
+    android:text="Account Profile"
+        android:textSize="50sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -29,9 +30,9 @@
 
         <ImageView
             android:id="@+id/imageViewForProfile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/avatar" />
 
     </LinearLayout>
 
@@ -46,13 +47,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Account Name"/>
+        android:text="Account Name"
+        android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/inputAccountName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textSize="50sp"/>
 
         <TextView
             android:id="@+id/emptyTextTwo"
@@ -80,11 +83,11 @@
                 android:layout_height="wrap_content"
                 android:text = ""/>
 
-    <Button
-        android:id="@+id/submitPhoto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="submit your photo"/>
+<!--    <Button-->
+<!--        android:id="@+id/submitPhoto"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="submit your photo"/>-->
 
 
 

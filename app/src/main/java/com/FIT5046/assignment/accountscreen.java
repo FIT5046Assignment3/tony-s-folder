@@ -55,7 +55,7 @@ public class accountscreen extends AppCompatActivity {
 
         changePasswordAndUsername = findViewById(R.id.changePasswordAndUsername);
 
-        submitPhoto = findViewById(R.id.submitPhoto);
+//        submitPhoto = findViewById(R.id.submitPhoto);
 
         ClickBackToHomePage = findViewById(R.id.ClickBackToHomePage);
 
@@ -78,14 +78,14 @@ public class accountscreen extends AppCompatActivity {
             }
         });
 
-        submitPhoto.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                Intent intentforSubmitPhoto = new Intent(accountscreen.this, submitPhotoScreen.class);
-                startActivity(intentforSubmitPhoto);
-            }
-        });
+//        submitPhoto.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View view) {
+//                Intent intentforSubmitPhoto = new Intent(accountscreen.this, submitPhotoScreen.class);
+//                startActivity(intentforSubmitPhoto);
+//            }
+//        });
 
         ClickBackToHomePage.setOnClickListener(new View.OnClickListener() {
             @Override

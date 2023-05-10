@@ -65,7 +65,7 @@ public class HomeScreenActivity extends AppCompatActivity {
 
         fireBaseUser = firebaseAuth.getCurrentUser();
 
-        ImageForHome = findViewById(R.id.imageViewForHome);
+//        ImageForHome = findViewById(R.id.imageViewForHome);
 
         if(fireBaseUser == null)
         {
