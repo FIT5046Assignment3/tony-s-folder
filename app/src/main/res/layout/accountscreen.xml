@@ -8,43 +8,110 @@
     android:orientation="vertical">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
     <TextView android:id="@+id/Account"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:text="Account"/>
+        android:gravity="center"
+    android:text="Account Profile"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageViewForProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
     <TextView
         android:id="@+id/AccountName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:gravity="center"
         android:text="Account Name"/>
 
+        <TextView
+            android:id="@+id/inputAccountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
 
-    <TextView
-        android:id="@+id/Profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Profile"/>
+        <TextView
+            android:id="@+id/emptyTextTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = ""/>
 
-    <TextView
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+    <Button
         android:id="@+id/changePasswordAndUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:text="change your password and your account name"/>
 
+            <TextView
+                android:id="@+id/emptyText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = ""/>
 
-    <TextView
+    <Button
         android:id="@+id/submitPhoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-            android:text="submit your photo"/>
+        android:text="submit your photo"/>
 
+
+
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/emptyTextOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = ""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <Button
+            android:id="@+id/ClickBackToHomePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to home Page。"
+            android:layout_gravity="bottom" />
+
+    </LinearLayout>
 
 
 

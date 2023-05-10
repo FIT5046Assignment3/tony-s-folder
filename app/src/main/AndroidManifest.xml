@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_CSERVICES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,9 +20,8 @@
         tools:targetApi="31">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
-        <activity
-            android:name=".MainActivity"
+            android:value="AIzaSyDV3f901NBO1BS_ESB0YRvapJYA5dkvjlw" />
+        <activity android:name=".loginScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SignUpScreen"></activity>
+        <activity
+            android:name=".MainActivity"/>
+
+
         <activity android:name=".mapActivity" />
+        <activity android:name=".HomeScreenActivity" />
+        <activity android:name=".accountscreen" />
+        <activity android:name=".changePasswordAndAccountNameScreen" />
+        <activity android:name=".submitPhotoScreen" />
 
 
     </application>

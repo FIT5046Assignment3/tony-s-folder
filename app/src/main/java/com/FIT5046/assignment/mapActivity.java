@@ -51,6 +51,11 @@ public class mapActivity extends AppCompatActivity implements
 
     private static final int Request_for_user_code = 99;
 
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +71,8 @@ public class mapActivity extends AppCompatActivity implements
                 .findFragmentById(R.id.mapUsegoogle);
         mapFragment.getMapAsync(this);
     }
+
+
 
 
     @Override

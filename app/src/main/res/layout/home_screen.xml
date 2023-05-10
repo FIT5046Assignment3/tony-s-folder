@@ -3,32 +3,112 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/welcome"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/welcomeBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize = "20sp"
         android:text="welcome back"/>
 
 
 
+        <TextView
+                android:id="@+id/accountNameFromDataBase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize = "20sp"/>
+
+
+    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewForHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+    </LinearLayout>
+
+
     <TextView
-        android:id="@+id/recentquiz"
+        android:id="@+id/emptytextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Recenet quizzes"/>
+        android:text = ""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/draw_polygon_shape"
+        >
+    <TextView
+        android:id="@+id/random"
+        android:shape = "rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="random"
+        android:textSize = "20sp"/>
+
+        <TextView
+            android:id="@+id/quiz"
+            android:shape = "rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quiz"
+            android:textSize = "20sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/emptytextViewOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = ""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/recenquiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Quizzes"
+            android:layout_weight="0.5"
+            />
+        <TextView
+            android:id="@+id/seeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="see All"
+            />
+    </LinearLayout>
+
 
     <Button
-        android:id="@+id/seeall"
+        android:id="@+id/goToprofile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="See all"/>
+        android:text="Go to profile"/>
 
 </LinearLayout>

@@ -10,6 +10,16 @@
         <item>unknown</item>
         <item>other</item>
     </string-array>
+
+    <string-array name="statearray">
+        <item>NSW</item>
+        <item>VIC</item>
+        <item>QLD</item>
+        <item>WA</item>
+        <item>SA</item>
+        <item>TAS</item>
+
+    </string-array>
     
 
 

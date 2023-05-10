@@ -3,14 +3,24 @@ package com.FIT5046.assignment;
 import java.util.Calendar;
 
 public class CreateAccountClass {
-    private String accountName,datePicker,AddressOne,AddressTwo,Cityinput,stateinput,zipinput,countryinput,spinnerforgender;
+    public String accountName;
+    private String datePicker;
+    private String AddressOne;
+    private String AddressTwo;
+    private String Cityinput;
+    private String stateinput;
+    private String zipinput;
+    private String countryinput;
+    private String spinnerforgender;
+    private String emailAddress;
+    private String password;
 
 
     public CreateAccountClass(){
 
     }
 
-    public CreateAccountClass(String accountName, String datePicker, String addressOne, String addressTwo, String cityinput, String stateinput, String zipinput, String countryinput,String spinnerforgender) {
+    public CreateAccountClass(String accountName, String datePicker, String addressOne, String addressTwo, String cityinput, String stateinput, String zipinput, String countryinput,String spinnerforgender,String emailAddress,String password) {
         this.accountName = accountName;
         this.datePicker = datePicker;
         this.AddressOne = addressOne;
@@ -20,6 +30,8 @@ public class CreateAccountClass {
         this.zipinput = zipinput;
         this.countryinput = countryinput;
         this.spinnerforgender = spinnerforgender;
+        this.emailAddress = emailAddress;
+        this.password = password;
     }
 
     public String getAccountName() {
@@ -56,5 +68,13 @@ public class CreateAccountClass {
 
     public String getSpinnerforgender() {
         return spinnerforgender;
+    }
+
+    public String getemailAddress() {
+        return emailAddress;
+    }
+
+    public String getpassword() {
+        return password;
     }
 }
