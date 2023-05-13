@@ -1,11 +1,9 @@
 package com.FIT5046.assignment;
 
 import android.Manifest;
-import android.app.Notification;
 import android.content.pm.PackageManager;
 import android.location.Location;
 
-import com.google.android.gms.common.api.GoogleApi;
 import com.google.android.gms.location.LocationListener;
 
 
@@ -32,7 +30,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.List;
 
 
 public class mapActivity extends AppCompatActivity implements

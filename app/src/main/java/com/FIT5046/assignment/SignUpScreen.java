@@ -8,16 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 
 public class SignUpScreen extends AppCompatActivity {
 
@@ -67,6 +58,7 @@ public class SignUpScreen extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String emailFormat = "^[\\w.-]+@[\\w.-]+\\.[\\w]+$";
                 String email_input =emailinput.getText().toString();
                 String password_input = passwordinput.getText().toString();
                 String confrim_password_input =  confrimpasswordinput.getText().toString();
@@ -77,6 +69,10 @@ public class SignUpScreen extends AppCompatActivity {
                 {
                     emailinput.setError("email is required");
 
+                }
+                else if(!email_input.matches(emailFormat))
+                {
+                    emailinput.setError("the email is invalid");
                 }
                 else if(password_input.isEmpty())
                 {
@@ -95,7 +91,7 @@ public class SignUpScreen extends AppCompatActivity {
 
                     //store email and password into authentication
 
-                                Intent intentforcontinueScreen = new Intent(SignUpScreen.this,MainActivity.class);
+                                Intent intentforcontinueScreen = new Intent(SignUpScreen.this, SignupMoreDetails.class);
                                 intentforcontinueScreen.putExtra("Email",email_input);
                                 intentforcontinueScreen.putExtra("password",password_input);
                                 startActivity(intentforcontinueScreen);

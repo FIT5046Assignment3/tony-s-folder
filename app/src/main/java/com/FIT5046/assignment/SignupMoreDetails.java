@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,10 +25,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class SignupMoreDetails extends AppCompatActivity {
 
 
     private EditText accountName,AddressOne,AddressTwo,Cityinput,zipinput,countryinput;
@@ -52,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     DatePickerDialog.OnDateSetListener setListener;
 
-    private Button mapbtn;
+
 
     private FirebaseAuth firebaseAuth;
 
@@ -111,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        MainActivity.this, new DatePickerDialog.OnDateSetListener() {
+                        SignupMoreDetails.this, new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int month, int day) {
                                 month = month + 1;
@@ -135,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupMoreDetails.this, "", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -154,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         spinnersate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        Toast.makeText(MainActivity.this,"",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupMoreDetails.this,"",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -164,16 +159,6 @@ public class MainActivity extends AppCompatActivity {
                 });
 
 
-                //button for map
-//                mapbtn = findViewById(R.id.mapbutton);
-//
-//                mapbtn.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View view) {
-//                        Intent intent = new Intent(MainActivity.this,mapActivity.class);
-//                        startActivity(intent);
-//                    }
-//                });
 
         SignUP.setOnClickListener(new View.OnClickListener() {
 
@@ -224,13 +209,13 @@ public class MainActivity extends AppCompatActivity {
                                 databaseReference.child(firebaseUser.getUid()).setValue(createAccountClass);
 
 
-                                Toast.makeText(MainActivity.this, "Sign up successful, both email and address are uploaded to realtime database and authentication" , Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignupMoreDetails.this, "Sign up successful, both email and address are uploaded to realtime database and authentication" , Toast.LENGTH_SHORT).show();
 
-                                Intent intentforHomeScreen = new Intent(MainActivity.this, HomeScreenActivity.class);
+                                Intent intentforHomeScreen = new Intent(SignupMoreDetails.this, HomeScreenActivity.class);
                                 intentforHomeScreen.putExtra("AccountName",account_name);
                                 startActivity(intentforHomeScreen);
                             } else {
-                                Toast.makeText(MainActivity.this, "Sign up has not been succeed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignupMoreDetails.this, "Sign up has not been succeed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
 
 

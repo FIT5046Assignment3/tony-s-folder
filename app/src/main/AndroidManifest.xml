@@ -31,14 +31,13 @@
         </activity>
         <activity android:name=".SignUpScreen"></activity>
         <activity
-            android:name=".MainActivity"/>
+            android:name=".SignupMoreDetails"/>
 
 
         <activity android:name=".mapActivity" />
         <activity android:name=".HomeScreenActivity" />
         <activity android:name=".accountscreen" />
         <activity android:name=".changePasswordAndAccountNameScreen" />
-        <activity android:name=".submitPhotoScreen" />
 
 
     </application>
